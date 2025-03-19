@@ -3,6 +3,5 @@
 ## TODO
 
 - [] Make it deploy (ngnas)
-- [] Scaffold basic ui with mock data
-- [] Home Page
-- [] Product page
+- [X] Scaffold basic ui with mock data
+- [] Landing page with info about Norgruppen AS and Links to the other pages.
