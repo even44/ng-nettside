@@ -1,5 +1,5 @@
 import { createTRPCRouter, publicProcedure } from "../trpc";
-import {promises, readdir} from "fs"
+import {readdir} from "fs"
 
 
 const anvendelserPath: string = "./public/anvendelser"
