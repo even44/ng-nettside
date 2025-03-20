@@ -1,15 +1,23 @@
 
-import { api, HydrateClient } from "~/trpc/server";
+import { api } from "~/trpc/react";
+import { HydrateClient } from "~/trpc/server";
 import NgContact from "./_components/ng-contact";
 import NgDescription from "./_components/ng-description";
+import { appRouter, createCaller } from "~/server/api/root";
+
+
 
 export default async function Home() {
+	const caller = createCaller({headers: new Headers()})
 
+	const test = await caller.anvendelser.test()
 	return (
 		<HydrateClient>
 		<main className="flex gap-6 min-h-screen flex-col items-center justify-top mb-8">
 			<NgContact/>
 			<NgDescription/>
+			<p>{test}</p>
+			
 		</main>
 		</HydrateClient>
 	);
