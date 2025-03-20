@@ -2,7 +2,7 @@ import { createTRPCRouter, publicProcedure } from "../trpc";
 import {readdir} from "fs"
 
 
-const anvendelserPath = "/app/public/anvendelser"
+const anvendelserPath = "./public/anvendelser"
 export const anvendelser: Anvendelse[] = []
 
 interface Anvendelse {
@@ -18,7 +18,7 @@ export const anvendelseRouter = createTRPCRouter({
 				console.log(err);
 				return null
 			}
-			console.log("Files" + files)
+			console.log("Files: " + files)
 			files.map((file) => {
 				if (file.includes(".pdf")) {
 					const annvendelse: Anvendelse = {

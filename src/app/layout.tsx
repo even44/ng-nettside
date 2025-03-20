@@ -20,7 +20,7 @@ function TopNav(){
 		text-sm sm:text-xl md:text-3xl font-semibold bg-gray-800 
 		shadow-md shadow-black text-nowrap">
 			<div className="w-6"><img src={logoUrl} width={100} alt="company logo"></img></div>
-			<div><Link href={"/"}>Norgruppen AS</Link ></div>
+			<div><Link href="/">Norgruppen AS</Link ></div>
 			<div>|</div>
 			<div><a href="https://norfilter.no/">Norfilter AS</a></div>
 			<div>|</div>
