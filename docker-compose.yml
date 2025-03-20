@@ -1,0 +1,7 @@
+services:
+  ng-nettside:
+    image: ghcr.io/even44/ng-nettside:latest
+    container_name: norgruppen-no
+    ports:
+      - 3000:3000
+    
