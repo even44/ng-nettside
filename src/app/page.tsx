@@ -12,7 +12,7 @@ export default async function Home() {
 	await caller.anvendelser.getFromDir()
 
 	const res = await caller.anvendelser.list()
-	
+	console.log(res)
 
 
 	//const test = await caller.anvendelser.test()
@@ -21,9 +21,9 @@ export default async function Home() {
 		<main className="flex gap-6 min-h-screen flex-col items-center justify-top mb-8">
 			<NgContact/>
 			<NgDescription/>
-			<ul>{res.map((a) => {
-				return a.file_name
-			})}</ul>
+			{res.map((a) => {
+				return a.file_name + "bob"
+			})}
 			
 		</main>
 		</HydrateClient>
