@@ -18,7 +18,7 @@ export const anvendelseRouter = createTRPCRouter({
 				console.log(err);
 				return null
 			}
-			console.log("Files: " + files)
+			console.log("Files: " + files.toString())
 			files.map((file) => {
 				if (file.includes(".pdf")) {
 					const annvendelse: Anvendelse = {
