@@ -16,7 +16,9 @@ export const anvendelseRouter = createTRPCRouter({
 
 			if (err != null){
 				console.log(err);
-				return null
+				return anvendelser.push({
+					file_name: err.message
+				})
 			}
 			console.log("Files: " + files.toString())
 			files.map((file) => {

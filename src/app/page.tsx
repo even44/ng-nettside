@@ -22,7 +22,7 @@ export default async function Home() {
 			<NgContact/>
 			<NgDescription/>
 			{res.map((a) => {
-				return a.file_name + "bob"
+				return a.file_name
 			})}
 			
 		</main>
