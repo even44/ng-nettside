@@ -9,7 +9,7 @@ export default function NgDescription() {
 				En lang og fin beskrivelse av norgruppen og hva det er
 				En lang og fin beskrivelse av norgruppen og hva det er
 				En lang og fin beskrivelse av norgruppen og hva det er
-				En lang og fin beskrivelse av norgruppen og hva det er
+				En lang og fin NYYYYYYYYYYYYY norgruppen og hva det er
 				En lang og fin beskrivelse av norgruppen og hva det er
 				En lang og fin beskrivelse av norgruppen og hva det er
 				En lang og fin beskrivelse av norgruppen og hva det er
