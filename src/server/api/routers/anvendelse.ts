@@ -2,7 +2,7 @@ import { createTRPCRouter, publicProcedure } from "../trpc";
 import {readdir} from "fs"
 
 
-const anvendelserPath: string = "./public/anvendelser"
+const anvendelserPath = "./public/anvendelser"
 export const anvendelser: Anvendelse[] = []
 
 interface Anvendelse {
