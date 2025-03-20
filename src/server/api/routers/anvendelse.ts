@@ -36,6 +36,7 @@ export const anvendelseRouter = createTRPCRouter({
     }),
 
 	list: publicProcedure.query(() => {
+		console.log("BOOOP")
 		return anvendelser
 	})
 });
