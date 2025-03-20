@@ -5,6 +5,7 @@ import { type Metadata } from "next";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import Link from "next/link";
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Norgruppen AS",
@@ -12,14 +13,14 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-const logoUrl: string = "https://nextcloud.even44.no/s/LHSTTZMXQJ8f9tx/download/LogoStjerne.png"
+const logoUrl = "https://nextcloud.even44.no/s/LHSTTZMXQJ8f9tx/download/LogoStjerne.png"
 
 function TopNav(){
 	return (
 		<nav className="flex w-full items-center justify-left gap-4 p-2 sm:p-4 
 		text-sm sm:text-xl md:text-3xl font-semibold bg-gray-800 
 		shadow-md shadow-black text-nowrap">
-			<div className="w-6"><img src={logoUrl} width="100%"></img></div>
+			<div className="w-6"><Image src={logoUrl} width={100} alt="company logo"></Image></div>
 			<div><Link href={"/"}>Norgruppen AS</Link ></div>
 			<div>|</div>
 			<div><a href="https://norflow.no/">Norflow AS</a></div>

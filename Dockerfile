@@ -2,8 +2,8 @@
 
 ##### DEPENDENCIES
 
-FROM --platform=linux/amd64 node:20-alpine AS deps
-RUN apk add --no-cache libc6-compat openssl1.1-compat
+FROM node:20-alpine3.21 AS deps
+RUN apk add --no-cache libc6-compat openssl
 WORKDIR /app
 
 
@@ -20,7 +20,7 @@ RUN \
 
 ##### BUILDER
 
-FROM --platform=linux/amd64 node:20-alpine AS builder
+FROM node:20-alpine3.21 AS builder
 #ARG DATABASE_URL
 #ARG NEXT_PUBLIC_CLIENTVAR
 WORKDIR /app
@@ -38,7 +38,7 @@ RUN \
 
 ##### RUNNER
 
-FROM --platform=linux/amd64 node:20-alpine AS runner
+FROM node:20-alpine3.21 AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
@@ -47,7 +47,7 @@ ENV NODE_ENV production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-COPY --from=builder /app/next.config.mjs ./
+COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/package.json ./package.json
 
