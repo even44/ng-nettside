@@ -22,7 +22,7 @@ function TopNav(){
 			<div className="w-6"><img src={logoUrl} width={100} alt="company logo"></img></div>
 			<div><Link href={"/"}>Norgruppen AS</Link ></div>
 			<div>|</div>
-			<div><a href="https://norflow.no/">Norflow AS</a></div>
+			<div><a href="https://norfilter.no/">Norfilter AS</a></div>
 			<div>|</div>
 			<div><a href="https://ingeberg.net/">CIHIAS AS</a></div>
 		</nav>

@@ -9,12 +9,21 @@ import { createCaller } from "~/server/api/root";
 export default async function Home() {
 	const caller = createCaller({headers: new Headers()})
 
+	await caller.anvendelser.getFromDir()
+
+	const res = await caller.anvendelser.list()
+	
+
+
 	//const test = await caller.anvendelser.test()
 	return (
 		<HydrateClient>
 		<main className="flex gap-6 min-h-screen flex-col items-center justify-top mb-8">
 			<NgContact/>
 			<NgDescription/>
+			<ul>{res.map((a) => {
+				return a.file_name
+			})}</ul>
 			
 		</main>
 		</HydrateClient>
